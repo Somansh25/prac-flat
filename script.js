@@ -1,4 +1,3 @@
-// List your local PDFs using relative paths from index.html
 const practicals = [
   { title: "Practical 1: Study of JFLAP Tool", file: "pdfs/practical-1.pdf" },
   { title: "Practical 2: Study of Other FLAT Tools", file: "pdfs/practical-2.pdf" },
@@ -26,7 +25,6 @@ function loadPractical(item, activeButton) {
   downloadBtn.href = item.file;
   fallbackLink.href = item.file;
 
-  // Highlight the selected button
   document.querySelectorAll(".pdf-item-btn").forEach((btn) => {
     btn.classList.remove("active");
   });
@@ -46,7 +44,6 @@ practicals.forEach((item, index) => {
   li.appendChild(button);
   pdfList.appendChild(li);
 
-  // Load the first practical by default
   if (index === 0) {
     loadPractical(item, button);
   }

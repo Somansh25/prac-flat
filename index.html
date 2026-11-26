@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FLAT Practicals Archive</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Formal Language &amp; Automata Theory Practicals</h1>
+    <p>Select a practical below to view it inline, open it in a new tab, or download the PDF.</p>
+  </header>
+
+  <main class="container">
+    <aside class="sidebar">
+      <h2>Practicals</h2>
+      <ul id="pdf-list">
+        <!-- Populated dynamically by script.js -->
+      </ul>
+    </aside>
+
+    <section class="viewer-panel">
+      <div class="viewer-toolbar">
+        <h2 id="current-title">Select a practical</h2>
+        <div class="actions">
+          <a id="open-btn" class="btn" href="pdfs/practical-1.pdf" target="_blank" rel="noopener noreferrer">
+            Open in New Tab
+          </a>
+          <a id="download-btn" class="btn btn-primary" href="pdfs/practical-1.pdf" download>
+            Download PDF
+          </a>
+        </div>
+      </div>
+
+      <!-- Inline PDF embed with fallback link for browsers that cannot render PDFs inline -->
+      <iframe
+        id="pdf-frame"
+        src="pdfs/practical-1.pdf"
+        title="PDF Practical Viewer"
+      >
+        <p>
+          Your browser does not support inline PDF viewing.
+          <a id="fallback-link" href="pdfs/practical-1.pdf" download>Download the PDF instead</a>.
+        </p>
+      </iframe>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

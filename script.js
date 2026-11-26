@@ -16,14 +16,12 @@ const currentTitle = document.getElementById("current-title");
 const pdfFrame = document.getElementById("pdf-frame");
 const openBtn = document.getElementById("open-btn");
 const downloadBtn = document.getElementById("download-btn");
-const fallbackLink = document.getElementById("fallback-link");
 
 function loadPractical(item, activeButton) {
   currentTitle.textContent = item.title;
   pdfFrame.src = item.file;
   openBtn.href = item.file;
   downloadBtn.href = item.file;
-  fallbackLink.href = item.file;
 
   document.querySelectorAll(".pdf-item-btn").forEach((btn) => {
     btn.classList.remove("active");
